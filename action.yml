@@ -61,7 +61,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: ${{ format('docker://public.ecr.aws/codelogic.com/codelogic_dotnet:{0}', inputs.version) }}
+  image: "${{ format('docker://public.ecr.aws/codelogic.com/codelogic_dotnet:{0}', inputs.version) }}"
   args: [
     "analyze",
     "-p=${{ inputs.scan_path }}",
