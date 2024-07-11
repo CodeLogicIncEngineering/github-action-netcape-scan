@@ -20,9 +20,7 @@ inputs:
     description: 'The Application node to create that will be the parent of all objects found in the scan.'
     required: true
   scan_space:
-    description: 'The name of the scan space that the data will be saved to. 
-    If specified, a ScanSpace with this name will be created if not found. 
-    If not specified, information will be saved to the default ScanSpace.'
+    description: 'The name of the scan space that the data will be saved to. If specified, a ScanSpace with this name will be created if not found. If not specified, information will be saved to the default ScanSpace.'
     required: false
   scan_path:
     description: 'The path of the file and folder to scan. Must start with /github/workspace/'
