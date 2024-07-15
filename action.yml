@@ -67,15 +67,15 @@ runs:
     "-p=${{ inputs.scan_path }}",
     "-a=${{ inputs.application_name }}",
     "--depth=${{ inputs.scan_path_depth }}",
-    "${{ inputs.scan_space != null && format('-s={0}', inputs.scan_space) || '' }}",
-    "${{ inputs.recursive_filter != null && format('-f={0}', inputs.recursive_filter) || '' }}",
-    "${{ inputs.exclusion_filter != null && format('-x={0}', inputs.exclusion_filter) || '' }}",
-    "${{ inputs.reference_path != null && format('--ref-path {0}', inputs.reference_path) || '' }}",
-    "${{ inputs.method_filter != null && format('-m={0}', inputs.method_filter) || '' }}",
-    "${{ inputs.database_identities != null && format('-d={0}', inputs.database_identities) || '' }}",
-    "${{ inputs.show_compiler_generated == 'true' && '--show-compiler-generated' || '' }}",
-    "${{ inputs.force_rescan == 'true' && '--rescan' || '' }}",
-    "${{ inputs.expunge_scan_sessions == 'true' && '-e' || '' }}"
+    "${{ inputs.scan_space != null && format('-s={0}', inputs.scan_space) || null }}",
+    "${{ inputs.recursive_filter != null && format('-f={0}', inputs.recursive_filter) || null }}",
+    "${{ inputs.exclusion_filter != null && format('-x={0}', inputs.exclusion_filter) || null }}",
+    "${{ inputs.reference_path != null && format('--ref-path {0}', inputs.reference_path) || null }}",
+    "${{ inputs.method_filter != null && format('-m={0}', inputs.method_filter) || null }}",
+    "${{ inputs.database_identities != null && format('-d={0}', inputs.database_identities) || null }}",
+    "${{ inputs.show_compiler_generated == 'true' && '--show-compiler-generated' || null }}",
+    "${{ inputs.force_rescan == 'true' && '--rescan' || null }}",
+    "${{ inputs.expunge_scan_sessions == 'true' && '-e' || null }}"
   ]
   env:
     CODELOGIC_HOST: ${{ inputs.codelogic_host }}
